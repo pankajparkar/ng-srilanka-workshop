@@ -1,31 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Movies Hub</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Movies <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<div class="container">
-  <div class="row">
-    <div class="col-4">
-      <div class="col-4">
-        <div class="card" style="width: 18rem;"><img class="card-img-top"
-            src="https://m.media-amazon.com/images/M/MV5BZDJjOTE0N2EtMmRlZS00NzU0LWE0ZWQtM2Q3MWMxNjcwZjBhXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
-            alt="The Rock">
-          <div class="card-body">
-            <h5 class="card-title">The Rock</h5>
-            <p class="card-text">Year: 1996</p><a class="btn btn-primary"
-              href="#">Open</a>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="card" style="width: 18rem;"><img class="card-img-top"
+    [attr.src]="movie.Poster"
+    [attr.alt]="movie.Title">
+  <div class="card-body">
+    <h5 class="card-title">{{movie.Title}}</h5>
+    <p class="card-text">Year: {{movie.Year}}</p><a class="btn btn-primary" href="#">Open</a>
   </div>
 </div>
