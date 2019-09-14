@@ -7,12 +7,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  movies;
+  movies$;
   constructor (private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get('http://www.omdbapi.com/?apikey=7dcc7fb6&s=Rock&type=movie&page=1').subscribe(
-      (data: any) => this.movies = data.Search
-    )
+    this.movies$ = this.http.get('http://www.omdbapi.com/?apikey=7dcc7fb6&s=Rock&type=movie&page=1');
   }
 }

@@ -14,7 +14,7 @@
 </nav>
 <div class="container">
   <div class="row">
-    <div class="col-4" *ngFor="let movie of movies">
+    <div class="col-4" *ngFor="let movie of (movies$ | async)?.Search">
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" [attr.src]="movie.Poster" [attr.alt]="movie.Title">
         <div class="card-body">
