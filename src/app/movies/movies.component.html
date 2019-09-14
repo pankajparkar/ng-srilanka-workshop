@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{movie.Title}}</h5>
                     <p class="card-text">Year: {{movie.Year}}</p>
-                    <a href="#" class="btn btn-primary">Open</a>
+                    <a [routerLink]="['/movies', movie.imdbID]" routerLinkActive="router-link-active"  class="btn btn-primary">Open</a>
                 </div>
             </div>
         </div>
