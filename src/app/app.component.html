@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Gallery</a>
+  <a class="navbar-brand" href="#">Movies Hub</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,19 +7,20 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Albums <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Movies <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
 </nav>
 <div class="container">
   <div class="row">
-    <div class="col-4" *ngFor="let album of albums">
+    <div class="col-4" *ngFor="let movie of movies">
       <div class="card" style="width: 18rem;">
+        <img class="card-img-top" [attr.src]="movie.Poster" [attr.alt]="movie.Title">
         <div class="card-body">
-          <h5 class="card-title">
-            {{album.title}}
-          </h5>
+          <h5 class="card-title">{{movie.Title}}</h5>
+          <p class="card-text">Year: {{movie.Year}}</p>
+          <a href="#" class="btn btn-primary">Open</a>
         </div>
       </div>
     </div>

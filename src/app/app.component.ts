@@ -15,17 +15,8 @@ export class AppComponent implements OnInit {
   constructor (private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get('https://jsonplaceholder.typicode.com/albums').subscribe(
-      data => this.albums = data
-    )
-    this.http.get('https://jsonplaceholder.typicode.com/albums').subscribe(
-      data => this.album = data
-    )
-    this.http.get('https://jsonplaceholder.typicode.com/photos').subscribe(
-      data => this.photos = data
-    )
-    this.http.get('https://jsonplaceholder.typicode.com/photos/1').subscribe(
-      data => this.photo = data
+    this.http.get('http://www.omdbapi.com/?apikey=7dcc7fb6&s=Rock&type=movie&page=1').subscribe(
+      (data: any) => this.albums = data.Search
     )
   }
 }
