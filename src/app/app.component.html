@@ -14,13 +14,16 @@
 </nav>
 <div class="container">
   <div class="row">
-    <div class="col-4" *ngFor="let movie of movies">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" [attr.src]="movie.Poster" [attr.alt]="movie.Title">
-        <div class="card-body">
-          <h5 class="card-title">{{movie.Title}}</h5>
-          <p class="card-text">Year: {{movie.Year}}</p>
-          <a href="#" class="btn btn-primary">Open</a>
+    <div class="col-4">
+      <div class="col-4">
+        <div class="card" style="width: 18rem;"><img class="card-img-top"
+            src="https://m.media-amazon.com/images/M/MV5BZDJjOTE0N2EtMmRlZS00NzU0LWE0ZWQtM2Q3MWMxNjcwZjBhXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
+            alt="The Rock">
+          <div class="card-body">
+            <h5 class="card-title">The Rock</h5>
+            <p class="card-text">Year: 1996</p><a class="btn btn-primary"
+              href="#">Open</a>
+          </div>
         </div>
       </div>
     </div>
