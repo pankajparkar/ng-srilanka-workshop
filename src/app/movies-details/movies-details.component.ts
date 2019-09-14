@@ -9,17 +9,13 @@ import { timer } from 'rxjs';
   styleUrls: ['./movies-details.component.css']
 })
 export class MoviesDetailsComponent implements OnInit {
-  movie$;
+  movie;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.params.id;
-    const timer$ = timer(5000)
     // Data get with the delay
-    this.movie$ = timer$.pipe(
-      () => this.http.get('http://www.omdbapi.com/?apikey=7dcc7fb6&i='+id)
-    )
+    this.movie = this.route.snapshot.data['movie']
   }
 
 }
